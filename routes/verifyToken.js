@@ -6,7 +6,7 @@ const verifyToken = (req, res, next) => {
   console.log(req);
 
   const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2I0ZDRjZjkzNDY5YjU4MzRkMjUzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MzQ2NzU1MCwiZXhwIjoxNjQzNzI2NzUwfQ._RQN22BjR08Pi0Rj2cbZsII5fi2U4d9KzVqKgaGFKKE";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2I0ZDRjZjkzNDY5YjU4MzRkMjUzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MzczMjgzNywiZXhwIjoxNjQzOTkyMDM3fQ.yagYx6HsJn7C965hlOBph8tBPAo3FvJT8d3fuaOLymw";
   jwt.verify(token, process.env.JWT_SEC, (err, user) => {
     if (err) res.status(403).json("Token is not valid!");
     req.user = user;
